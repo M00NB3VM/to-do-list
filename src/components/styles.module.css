@@ -1,0 +1,190 @@
+/*Colors: 
+Dark purple #5C0099
+Lavender #C5ADD6
+Yellow #FFEE32
+
+/*font-family: 'Nunito', sans-serif;
+font-family: 'Shizuru', cursive;*/
+
+@import url("https://fonts.googleapis.com/css2?family=Nunito&family=Shizuru&display=swap");
+
+body {
+  background-color: #c5add6;
+}
+
+.background {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 300px;
+  width: 300px;
+  background-image: url("../../public/post-it.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.header {
+  margin-top: 150px;
+  margin-left: 150px;
+}
+
+.main {
+  text-align: center;
+  font-family: "Nunito", sans-serif;
+  margin-left: 150px;
+}
+
+.h1 {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #5c0099;
+  font-size: 3rem;
+  font-family: "Shizuru", cursive;
+}
+
+.input {
+  height: 30px;
+  background-color: #c5add6;
+  border: 3px solid #5c0099;
+  border-radius: 10px;
+  margin: 5px;
+  font-size: 1.5rem;
+  padding-left: 5px;
+}
+
+.input:focus {
+  outline: 1px solid #ffee32;
+}
+
+.addBtn {
+  cursor: pointer;
+  height: 36px;
+  border-radius: 10px;
+  border: none;
+  background-color: #5c0099;
+  padding: 10px 15px;
+  margin: 5px;
+  font-size: 1.5rem;
+  color: #ffee32;
+  line-height: 0;
+}
+
+ul {
+  padding: 0;
+}
+
+.task {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  cursor: pointer;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../public/checkbox-unchecked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.completed {
+  cursor: pointer;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../public/checkbox-checked.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.taskText {
+  font-size: 1.5rem;
+  min-height: 40px;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 10px 20px;
+  background-color: white;
+}
+
+.completedText {
+  font-size: 1.5rem;
+  min-height: 40px;
+  min-width: 300px;
+  max-width: 300px;
+  padding: 10px 20px;
+  background-color: white;
+  text-decoration: line-through;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.removeBtn {
+  cursor: pointer;
+  margin: 10px;
+  height: 40px;
+  width: 40px;
+  background-image: url("../../public/trashcan.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/*mMedia Queries*/
+
+@media screen and (max-width: 700px) {
+  .background {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 250px;
+    width: 250px;
+    background-image: url("../../public/post-it.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  .header {
+    margin-top: 230px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  .main {
+    max-width: 100%;
+    margin: 5px;
+  }
+
+  .h1 {
+    position: relative;
+    z-index: 1;
+    color: #5c0099;
+  }
+
+  .input {
+    max-width: 90%;
+  }
+
+  .taskText {
+    font-size: 1rem;
+    padding: 5px;
+    background-color: white;
+    height: auto;
+    width: 40%;
+    min-height: 40px;
+    min-width: 0;
+  }
+
+  .completedText {
+    font-size: 1rem;
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.5);
+    height: auto;
+    width: 40%;
+    min-height: 40px;
+    min-width: 0;
+  }
+}
